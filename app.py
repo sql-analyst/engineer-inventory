@@ -7,6 +7,7 @@ app = Flask(__name__)
 # Define the base directory
 BASE_DIR = r"C:\Users\sross\OneDrive\Documents\Consulting\Engineer_marketplace_flask"
 
+
 # Load data from Excel file
 def load_inventory_data():
     excel_path = os.path.join(BASE_DIR, 'data', 'Stock.csv')
