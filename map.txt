@@ -1,0 +1,13 @@
+C:\Users\sross\OneDrive\Documents\Consulting\Engineer_marketplace_flask/
+├── app.py
+├── data/
+│   └── Stock.xlsx
+├── static/
+│   ├── css/
+│   │   ├── style.css
+│   │   └── space.css
+│   └── js/
+│       └── search.js
+└── templates/
+    ├── index.html
+    └── space.html

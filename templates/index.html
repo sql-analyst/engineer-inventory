@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Inventory Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <h1>Engineering Inventory Search</h1>
+            <form method="GET" class="search-form" id="searchForm">
+                <input type="text" name="search" class="search-box" placeholder="Search by code or description..." value="{{ request.args.get('search', '') }}">
+                <select name="type" class="type-select" id="typeSelect">
+                    <option value="">All Types</option>
+                    {% for type in types %}
+                    <option value="{{ type }}" {% if type == selected_type %}selected{% endif %}>{{ type }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="search-button">Search</button>
+            </form>
+            <div class="button-container">
+                <a href="{{ url_for('space') }}" class="space-button">Visit Space</a>
+            </div>
+        </div>
+        
+        {% if results %}
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in results %}
+                <tr>
+                    <td>{{ item.Code }}</td>
+                    <td>{{ item.Description }}</td>
+                    <td class="quantity-cell">{{ item.Quantity }}</td>
+                    <td>{{ item.Type }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+    <script src="{{ url_for('static', filename='js/search.js') }}"></script>
+</body>
+</html>

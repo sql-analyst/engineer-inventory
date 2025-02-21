@@ -1,0 +1,84 @@
+﻿Unique Code Identifier,Description,Quantity,Type
+ZYU,"Pneumatic Valve, Valve, Pneumatic",300,Mechanical
+TRD,"Hydraulic Pump, Pump, Hydraulic",45,Mechanical
+WER,"Copper Wire, Wire, Copper, Electrical",1000,Electrical
+HYJ,"Electrical Cable, Cable, Electrical",200,Electrical
+SDF,"Terminal Block, Block, Terminal, Electrical",150,Electrical
+FDS,"Digital Multimeter, Meter, Digital, Electrical",80,Electrical
+GHP,"Switch, Switch, Electrical",110,Electrical
+XCV,"Power Circuit, Circuit, Power, Electrical",25,Electrical
+POI,"Cable Connector, Connector, Cable, Electrical",80,Electrical
+FGH,"Wire Stripper, Stripper, Wire, Tools",32,Tools
+BND,"Welding Machine, Machine, Welding, Tools",10,Tools
+PLO,"Heat Gun, Heat Gun, Tools",50,Tools
+YUI,"Tool Belt, Belt, Tool, Tools",20,Tools
+QAZ,"Magnetic Holder, Magnetic, Holder, Tools",75,Tools
+VBG,"Bolt Cutter, Cutter, Bolt, Tools",60,Tools
+MNB,"Impact Driver, Driver, Impact, Tools",30,Tools
+OPL,"Screwdriver Set, Set, Screwdriver, Tools",95,Tools
+JLK,"Cordless Drill, Drill, Cordless, Tools",12,Tools
+FGH,"Bench Vice, Vice, Bench, Tools",27,Tools
+LOP,"Pipe Wrench, Wrench, Pipe, Tools",42,Tools
+YHG,"Utility Knife, Knife, Utility, Tools",58,Tools
+ZXC,"Laser Level, Level, Laser, Tools",35,Tools
+RTY,"Drill Bits, Bits, Drill, Tools",105,Tools
+NBM,"Socket Wrench, Wrench, Socket, Tools",50,Tools
+KJU,"Car Jack, Jack, Car, Tools",18,Tools
+ETR,"Ratchet Tool, Tool, Ratchet, Tools",90,Tools
+KGH,"Tape Measure, Measure, Tape, Tools",120,Tools
+WER,"Copper Coil, Coil, Copper, Mechanical",75,Mechanical
+ABC,"Solenoid Valve, Valve, Solenoid, Mechanical",130,Mechanical
+OPI,"Butterfly Valve, Butterfly, Valve, Mechanical",9,Mechanical
+XYT,"Ball Valve, Valve, Ball, Mechanical",56,Mechanical
+HJK,"Gate Valve, Valve, Gate, Mechanical",22,Mechanical
+PLO,"Plug, Plug, Mechanical",82,Mechanical
+JHK,"Piston Check, Check, Piston, Mechanical",60,Mechanical
+CDF,"Dual Plate, Plate, Dual, Mechanical",77,Mechanical
+VBN,"Swing Check, Check, Swing, Mechanical",44,Mechanical
+GHR,"Copper Pipe, Pipe, Copper, Mechanical",103,Mechanical
+ZUV,"Pressure Regulator, Regulator, Pressure, Mechanical",25,Mechanical
+MNB,"Actuator, Actuator, Mechanical",20,Mechanical
+TQR,"Butterfly Valve, Valve, Butterfly, Mechanical",13,Mechanical
+LKJ,"Flow Meter, Meter, Flow, Mechanical",90,Mechanical
+PWO,"Hydraulic Cylinder, Cylinder, Hydraulic, Mechanical",55,Mechanical
+ZXY,"Screw, Screw, Mechanical",210,Mechanical
+ABC,Ball Valve,456,Mechanical
+XYZ,Gate Valve,522,Mechanical
+A123,Swing Check,166,Mechanical
+XYA,Piston Check,508,Mechanical
+KJH,Dual Plate,404,Mechanical
+OPI,Butterfly,8,Mechanical
+YUI,Tools,56,Mechanical
+QWE,Wires,78,Mechanical
+WER,Copper,2,Mechanical
+TRE,Plug,2,Mechanical
+TGH,Transformer,10,Electrical
+MNB,Motor,35,Electrical
+BVC,Circuit Breaker,210,Electrical
+QAZ,Cable,95,Electrical
+HJK,Resistor,100,Electrical
+LKJ,Capacitor,120,Electrical
+FGH,Fuse,50,Electrical
+RTY,Battery,72,Electrical
+PLO,LED Lamp,65,Electrical
+ZXC,Power Supply,33,Electrical
+WXY,Control Panel,21,Electrical
+OPL,Soldering Iron,8,Tools
+ERY,Hammer,45,Tools
+IOP,Wrench,63,Tools
+JKL,Screwdriver,77,Tools
+ASX,Pliers,40,Tools
+FDS,Drill,29,Tools
+GHD,Saw,11,Tools
+MNB,Ladder,18,Tools
+VBN,Chisel,22,Tools
+CROW,Crowbar,34,Tools
+ZAX,Socket Set,15,Tools
+CVB,Measuring Tape,90,Tools
+UIQ,Angle Grinder,25,Tools
+WAZ,Welding Mask,50,Tools
+RFG,Clamps,60,Tools
+TYU,Power Drill,19,Tools
+LOP,Safety Gloves,150,Tools
+DFH,Tool Box,45,Tools
+POI,Workbench,9,Tools
