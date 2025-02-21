@@ -5,8 +5,8 @@ import os
 app = Flask(__name__)
 
 # Define the base directory
-BASE_DIR = r"C:\Users\sross\OneDrive\Documents\Consulting\Engineer_marketplace_flask"
-
+#BASE_DIR = r"C:\Users\sross\OneDrive\Documents\Consulting\Engineer_marketplace_flask"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Load data from Excel file
 def load_inventory_data():
