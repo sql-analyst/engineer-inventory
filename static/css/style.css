@@ -109,3 +109,118 @@ h1 {
 .quantity-cell {
     text-align: right;
 }
+
+/* Add these styles to your existing style.css file */
+
+/* Enquire button styling */
+.enquire-button {
+    padding: 10px 20px;
+    background-color: #f08080;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.enquire-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.enquire-button.active {
+    background-color: #e35252;
+}
+
+.enquire-button:hover:not(:disabled) {
+    background-color: #e35252;
+}
+
+/* Checkbox styling */
+.checkbox-cell {
+    text-align: center;
+}
+
+.item-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Button container */
+.button-container {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+/* Enquiry form styling */
+.enquiry-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.enquiry-form {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.back-button {
+    padding: 10px 20px;
+    background-color: #607d8b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.back-button:hover {
+    background-color: #546e7a;
+}

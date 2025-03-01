@@ -21,31 +21,38 @@
                 <button type="submit" class="search-button">Search</button>
             </form>
             <div class="button-container">
+                <button id="enquireButton" class="enquire-button" disabled>Enquire</button>
                 <a href="{{ url_for('space') }}" class="space-button">Visit Space</a>
             </div>
         </div>
         
         {% if results %}
-        <table class="results-table">
-            <thead>
-                <tr>
-                    <th>Code</th>
-                    <th>Description</th>
-                    <th>Quantity</th>
-                    <th>Type</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for item in results %}
-                <tr>
-                    <td>{{ item.Code }}</td>
-                    <td>{{ item.Description }}</td>
-                    <td class="quantity-cell">{{ item.Quantity }}</td>
-                    <td>{{ item.Type }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+        <form id="enquiryForm" action="{{ url_for('enquiry') }}" method="POST">
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>Code</th>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in results %}
+                    <tr>
+                        <td class="checkbox-cell">
+                            <input type="checkbox" name="selected_items" value="{{ item.Code }}" class="item-checkbox" data-description="{{ item.Description }}" data-type="{{ item.Type }}">
+                        </td>
+                        <td>{{ item.Code }}</td>
+                        <td>{{ item.Description }}</td>
+                        <td class="quantity-cell">{{ item.Quantity }}</td>
+                        <td>{{ item.Type }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </form>
         {% endif %}
     </div>
     <script src="{{ url_for('static', filename='js/search.js') }}"></script>
