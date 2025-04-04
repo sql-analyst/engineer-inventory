@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Inventory Form</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #000;
+            width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>{{ form_title }}</h2>
+
+    <form action="{{ url_for('submit_form') }}" method="POST">
+        <!-- Item_Code is hidden for editing -->
+        <input type="hidden" name="item_code" value="{{ item_code }}">
+
+        <label for="category">Category</label>
+        <input type="text" name="category" value="{{ category }}" required>
+
+        <label for="sub_category">Sub-Category</label>
+        <input type="text" name="sub_category" value="{{ sub_category }}">
+
+        <label for="category_description">Category Description</label>
+        <input type="text" name="category_description" value="{{ category_description }}">
+
+        <label for="make">Make</label>
+        <input type="text" name="make" value="{{ make }}">
+
+        <label for="model">Model</label>
+        <input type="text" name="model" value="{{ model }}">
+
+        <label for="certification">Certification</label>
+        <input type="text" name="certification" value="{{ certification }}">
+
+        <label for="specification">Specification</label>
+        <input type="text" name="specification" value="{{ specification }}">
+
+        <label for="location">Location</label>
+        <input type="text" name="location" value="{{ location }}">
+
+        <label for="price">Price</label>
+        <input type="number" name="price" value="{{ price }}" required>
+
+        <div style="display: flex; gap: 10px;">
+			<button type="submit" style="flex: 1;">Submit</button>
+			<a href="{{ url_for('all_products') }}" style="flex: 1;">
+				<button type="button" style="width: 100%; padding: 10px; background-color: #6c757d; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">Cancel</button>
+			</a>
+		</div>
+    </form>
+</div>
+
+</body>
+</html>

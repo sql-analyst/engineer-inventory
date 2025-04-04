@@ -9,7 +9,11 @@
 <body>
     <div class="container">
         <div class="search-container">
-            <h1>Engineering Inventory Search</h1>
+			<div class="header-row">
+				<h1 style="color:white">Engineering Inventory Search</h1>
+				<a href="/all_products" class="logout-button">All Products</a>
+				<a href="/logout" id="logOutButton" class="logout-button">Log Out</a>
+			</div>
             <form method="GET" class="search-form" id="searchForm">
                 <input type="text" name="search" class="search-box" placeholder="Search by code or description..." value="{{ request.args.get('search', '') }}">
                 <select name="type" class="type-select" id="typeSelect">
@@ -20,13 +24,12 @@
                 </select>
                 <button type="submit" class="search-button">Search</button>
             </form>
-            <div class="button-container">
-                <button id="enquireButton" class="enquire-button" disabled>Enquire</button>
-                <a href="{{ url_for('space') }}" class="space-button">Visit Space</a>
-            </div>
         </div>
         
         {% if results %}
+		<div class="button-container">
+			<button id="enquireButton" class="enquire-button" disabled>Enquire</button>
+		</div>
         <form id="enquiryForm" action="{{ url_for('enquiry') }}" method="POST">
             <table class="results-table">
                 <thead>
@@ -34,22 +37,28 @@
                         <th>Select</th>
                         <th>Code</th>
                         <th>Description</th>
-                        <th>Quantity</th>
+                        <th>Price</th>
                         <th>Type</th>
+						<th>Image</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for item in results %}
-                    <tr>
-                        <td class="checkbox-cell">
-                            <input type="checkbox" name="selected_items" value="{{ item.Code }}" class="item-checkbox" data-description="{{ item.Description }}" data-type="{{ item.Type }}">
-                        </td>
-                        <td>{{ item.Code }}</td>
-                        <td>{{ item.Description }}</td>
-                        <td class="quantity-cell">{{ item.Quantity }}</td>
-                        <td>{{ item.Type }}</td>
-                    </tr>
-                    {% endfor %}
+					{% for item in results %}
+					<tr>
+						<td><input type="checkbox" name="selected_items" value="{{ item.Code }}" class="item-checkbox"></td>
+						<td>{{ item.Code }}</td>
+						<td>{{ item.Description }}</td>
+						<td>{{ item.Price }}</td>
+						<td>{{ item.Type }}</td>
+						<td>
+							{% if item.ImageUrl %}
+							<img src="{{ item.ImageUrl }}" alt="Product image" class="product-image" style="max-width: 50px; max-height: 50px;">
+							{% else %}
+							<span>No image</span>
+							{% endif %}
+						</td>
+					</tr>
+					{% endfor %}
                 </tbody>
             </table>
         </form>

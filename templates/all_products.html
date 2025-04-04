@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Inventory Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <div class="header-row">
+                <h1 style="color:white">Engineering Inventory Management</h1>
+                <a href="{{ url_for('home') }}" class="nav-button">Search</a>
+                <a href="/logout" id="logOutButton" class="logout-button">Log Out</a>
+            </div>          
+        </div>
+
+        <!-- Add Item Button centered -->
+        <div style="text-align: center; margin-bottom: 20px;">
+            <a href="{{ url_for('item_admin') }}" class="add-item-button">
+                <button class="add-button">ADD ITEM</button>
+            </a>
+        </div>
+
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Type</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in products %}
+                <tr data-id="{{ item.Code }}">
+                    <td>{{ item.Code }}</td>
+                    <td>{{ item.Description or 'No description' }}</td>
+                    <td>{{ item.Price }}</td>
+                    <td style="color: black;">{{ item.Type }}</td>
+                    <td>
+                        <!-- Edit Button -->
+                        <a href="{{ url_for('item_admin', item_code=item.Code) }}">
+                            <button class="edit-button">Edit</button>
+                        </a>
+                    </td>                  
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="{{ url_for('static', filename='js/search.js') }}"></script>
+</body>
+</html>
